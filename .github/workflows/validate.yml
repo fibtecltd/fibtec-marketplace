@@ -1,0 +1,26 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  catalogue:
+    name: Validate the catalogue
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Install the Claude Code CLI (pinned)
+        run: npm install --global @anthropic-ai/claude-code@2.1.327
+
+      - name: Validate the catalogue (warnings fail the build)
+        run: claude plugin validate . --strict
+
+      - name: Every plugin source points at a Git ref that exists
+        run: python3 scripts/check_sources.py
