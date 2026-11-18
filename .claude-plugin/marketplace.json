@@ -1,0 +1,169 @@
+{
+  "name": "fibtec-marketplace",
+  "description": "Claude Code plugins for Fibtec Limited's products: pyvar (risk computation), ETL Integrator and TenGrade. A catalogue only: each plugin lives and is released in its own repository.",
+  "owner": {
+    "name": "Fibtec Limited",
+    "url": "https://www.fibtec.co.uk"
+  },
+  "plugins": [
+    {
+      "name": "pyvar-market-risk",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/market-risk",
+        "ref": "master"
+      },
+      "description": "71 functions: VaR, ES, stress, Greeks, P&L attribution, backtesting, GARCH, FRTB SA/IMA"
+    },
+    {
+      "name": "pyvar-credit-risk",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/credit-risk",
+        "ref": "master"
+      },
+      "description": "55 functions: PD/LGD/EAD, IRB/SA, XVA full suite, IFRS 9 ECL, CDS, SA-CCR, scoring"
+    },
+    {
+      "name": "pyvar-liquidity-risk",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/liquidity-risk",
+        "ref": "master"
+      },
+      "description": "40 functions: LCR, NSFR, HQLA, cash flow, ILAAP, intraday, LiqVaR"
+    },
+    {
+      "name": "pyvar-operational-risk",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/operational-risk",
+        "ref": "master"
+      },
+      "description": "44 functions: LDA, AMA, SMA, RCSA, KRI, scenario, BEICF, cyber/model/IT risk"
+    },
+    {
+      "name": "pyvar-portfolio-analytics",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/portfolio-analytics",
+        "ref": "master"
+      },
+      "description": "50 functions: Markowitz/BL/risk-parity, Sharpe/Sortino, Brinson, FF5, PCA, HMM, ESG"
+    },
+    {
+      "name": "pyvar-regulatory",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/regulatory",
+        "ref": "master"
+      },
+      "description": "30 functions: Basel III/IV, FRTB, ICAAP/SREP, MiFID II, EMIR, Solvency II, CRR2"
+    },
+    {
+      "name": "pyvar-derivatives",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/derivatives",
+        "ref": "master"
+      },
+      "description": "62 functions: BS/Heston/SABR/Dupire/LSM, exotic options, bonds, IRS/CDS, FX"
+    },
+    {
+      "name": "pyvar-alm",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/alm",
+        "ref": "master"
+      },
+      "description": "33 functions: Duration gap, NII/EVE, IRRBB 6 shocks, repricing, NMD, FTP"
+    },
+    {
+      "name": "pyvar-arch-api-gateway",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/arch/api-gateway",
+        "ref": "master"
+      },
+      "description": "Arch: FastAPI, Pydantic v2, JWT and API-key auth, orjson, rate limiting, OpenAPI"
+    },
+    {
+      "name": "pyvar-arch-data-ingestion",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/arch/data-ingestion",
+        "ref": "master"
+      },
+      "description": "Arch: Polars lazy scan, PyArrow, Parquet, Arrow IPC, schema validation"
+    },
+    {
+      "name": "pyvar-arch-compute",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/arch/compute",
+        "ref": "master"
+      },
+      "description": "Arch: NumPy/Numba JIT, SciPy, Dask, Ray, Celery+Redis task dispatch"
+    },
+    {
+      "name": "pyvar-arch-storage",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/arch/storage",
+        "ref": "master"
+      },
+      "description": "Arch: Redis cache, PostgreSQL/SQLAlchemy, S3/MinIO Parquet object store"
+    },
+    {
+      "name": "pyvar-arch-observability",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/arch/observability",
+        "ref": "master"
+      },
+      "description": "Arch: Prometheus, Grafana, Sentry, Bandit, input validation security"
+    },
+    {
+      "name": "pyvar-mcp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/pyvar.git",
+        "path": "plugins/mcp",
+        "ref": "master"
+      },
+      "description": "MCP server: all 385 pyvar functions as Claude Code tools, via the live API"
+    },
+    {
+      "name": "etlgen",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fibtecltd/fibtec-etlgen-plugin.git",
+        "path": "plugin",
+        "ref": "main"
+      },
+      "description": "ETL Integrator: generate ETL scripts, REST and GraphQL connectors and webhook handlers from Claude Code (drives the etlgen command-line client; needs an ETL Integrator account)."
+    },
+    {
+      "name": "tengrade",
+      "source": {
+        "source": "github",
+        "repo": "fibtecltd/fibtec-tengrade-plugin",
+        "ref": "main"
+      },
+      "description": "TenGrade: build, publish and manage exams and candidate instances from Claude Code (needs a TenGrade organisation account; publishing and inviting candidates spend organisation credit)."
+    }
+  ]
+}
